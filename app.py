@@ -14,7 +14,6 @@ if not os.path.exists(MODEL_PATH):
 else:
     model = pickle.load(open(MODEL_PATH, "rb"))
 
-```
 age = st.number_input("Age", min_value=18, max_value=100, value=30)
 bmi = st.number_input("BMI", min_value=10.0, max_value=50.0, value=25.0)
 
