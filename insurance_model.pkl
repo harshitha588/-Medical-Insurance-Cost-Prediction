@@ -1,0 +1,4 @@
+import pickle
+pickle.dump(rf, open("insurance_model.pkl", "wb"))
+from google.colab import files
+files.download("insurance_model.pkl")
