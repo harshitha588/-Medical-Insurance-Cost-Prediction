@@ -7,8 +7,6 @@ st.title("Medical Insurance Cost Predictor")
 
 st.write("Enter the details below to predict insurance charges.")
 
-# Check if model exists
-
 MODEL_PATH = "insurance_model.pkl"
 
 if not os.path.exists(MODEL_PATH):
@@ -35,10 +33,8 @@ region_map = {
 region = region_map[region]
 
 if st.button("Predict Insurance Cost"):
-    try:
-        sample = np.array([[age, bmi, smoker, region]])
-        prediction = model.predict(sample)
-        st.success(f"Estimated Insurance Cost: ${prediction[0]:,.2f}")
-    except Exception as e:
-        st.error(f"Prediction error: {e}")
+    sample = np.array([[age, bmi, smoker, region]])
+    prediction = model.predict(sample)
+
+    st.success(f"Estimated Insurance Cost: ${prediction[0]:,.2f}")
 ```
