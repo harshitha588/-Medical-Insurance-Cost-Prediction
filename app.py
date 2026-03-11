@@ -10,9 +10,9 @@ st.write("Enter the details below to predict insurance charges.")
 MODEL_PATH = "insurance_model.pkl"
 
 if not os.path.exists(MODEL_PATH):
-st.error("Model file 'insurance_model.pkl' not found. Upload it to the same directory as app.py.")
+    st.error("Model file 'insurance_model.pkl' not found. Upload it to the same directory as app.py.")
 else:
-model = pickle.load(open(MODEL_PATH, "rb"))
+    model = pickle.load(open(MODEL_PATH, "rb"))
 
 ```
 age = st.number_input("Age", min_value=18, max_value=100, value=30)
