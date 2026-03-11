@@ -36,4 +36,3 @@ if st.button("Predict Insurance Cost"):
     prediction = model.predict(sample)
 
     st.success(f"Estimated Insurance Cost: ${prediction[0]:,.2f}")
-```
